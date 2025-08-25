@@ -1,0 +1,28 @@
+{
+  "name": "demoapiautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {"test":"cucumber-js test"},
+  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madhurade/DemoAPIAutomation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/madhurade/DemoAPIAutomation/issues"
+  },
+  "homepage": "https://github.com/madhurade/DemoAPIAutomation#readme",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "axios": "^1.11.0"
+  }
+}
