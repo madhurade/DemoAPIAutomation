@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {"test":"cucumber-js test"},
-  
+  "scripts": {
+    "test": "npx cucumber-js --require-module ts-node/register --require src/test/steps/**/*.ts --format json:reports/cucumber_report.json",
+    "test:headed": "cucumber-js test --tags @headed",
+    "report": "node report.js",
+    "test:report": "npm run test && node report && powershell Start-Process 'reports/cucumber_report.html'",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "lint": "eslint 'src/**/*.{ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "format": "prettier --write 'src/**/*.{ts,tsx,json,md}'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/madhurade/DemoAPIAutomation.git"
@@ -19,8 +28,21 @@
   "devDependencies": {
     "@cucumber/cucumber": "^11.3.0",
     "@playwright/test": "^1.55.0",
+    "@types/cucumber": "^6.0.1",
     "@types/node": "^24.3.0",
-    "ts-node": "^10.9.2"
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "allure-cucumberjs": "^3.3.3",
+    "allure-js-commons": "^3.3.3",
+    "chai": "^6.0.1",
+    "cucumber-html-reporter": "^7.2.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "playwright": "^1.55.0",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
   },
   "dependencies": {
     "axios": "^1.11.0"
