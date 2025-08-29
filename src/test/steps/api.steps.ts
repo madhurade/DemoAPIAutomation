@@ -14,16 +14,27 @@ Given('I have access to the ReqRes API', async function () {
 
 // Scenario steps
 Given('I send a GET request to {string}', async function (url: string) {
-  response = await axios.get(url,{ headers: {'x-api-key':'reqres-free-v1'} });
+ try{ response = await axios.get(url,{ headers: {'x-api-key':'reqres-free-v1'} });}
+ catch(error: any){
+  console.error(`Error during GET request to ${url}:`, error.message);  
+  console.error('Response data:', error.response?.data);
+  throw error; // Rethrow the error to ensure the test fails
+ }
   //console.log('Response Data:', response.data);
   console.log('list:', response.status);
 });
 
-Then('the response status should be {int}', async function (statusCode: number) {
+Then('the Get response status should be {int}', async function (statusCode: number) {
+  if (!response) {
+    throw new Error('Response object is missing!');
+  }
   expect(response.status).toBe(statusCode);
 });
 
-Then('the response should contain a list of users ', async function () {
+Then('the response should contain a list of users', async function () {
+  if (!response) {
+    throw new Error('Response object is missing!');
+  }
   expect(response.status).toBe(200); // Ensure response is OK
 
   const responseBody = response.data;
@@ -46,19 +57,27 @@ Then('the response should contain a list of users ', async function () {
 //Scenario:create user using below data
 Given('I send a POST request to {string} with body:', async function (url: string, dataTable) {
   const requestBody = await dataTable.rowsHash();
-  response = await axios.post(url, requestBody, {
+  try {response = await axios.post(url, requestBody, {
     headers: {
       'Content-Type': 'application/json',
       'x-api-key':'reqres-free-v1'
     },
-  });
+  });}
+  catch(error: any){
+    console.error(`Error during POST request to ${url}:`, error.message);  
+    console.error('Response data:', error.response?.data);
+    throw error; // Rethrow the error to ensure the test fails
+   }
    console.log('Response Status of Post:', response.status);
 });
-Then('the response status should be {int} for creation', async function (statusCode: number) {
+Then('the Post response status should be {int}', async function (statusCode: number) {
+  if (!response) {
+    throw new Error('Response object is missing!');
+  }
   expect(response.status).toBe(statusCode);
 });
 
-Then('the response should contain the created user details', async function () {
+Then('the response should contain the created user\'s details', async function () {
   expect(response.data).toHaveProperty('name');
   expect(response.data).toHaveProperty('job');
   expect(response.data).toHaveProperty('id');
@@ -67,14 +86,27 @@ Then('the response should contain the created user details', async function () {
 //scenario 3: Update User
 Given('I send a PUT request to {string} with body:', async function (url: string, dataTable) {
   const requestBody = await dataTable.rowsHash();
-  response = await axios.put(url, requestBody, {
+  try{response = await axios.put(url, requestBody, {
     headers: {
       'Accept': 'application/json',
       'x-api-key':'reqres-free-v1'
     },
-  });
+  });}
+  catch(error: any){
+    console.error(`Error during PUT request to ${url}:`, error.message);  
+    console.error('Response data:', error.response?.data);
+    throw error; // Rethrow the error to ensure the test fails
+   }  
    console.log('Response Status of PUT:', response.status);
 });
+
+Then('the Put response status should be {int}', async function (statusCode: number) {
+  if (!response) {
+    throw new Error('Response object is missing!');
+  } 
+  expect(response.status).toBe(statusCode);
+});
+
 Then("the response should contain the updated user's details", async function () {
   expect(response.data).toHaveProperty('name');
   expect(response.data).toHaveProperty('job');
@@ -83,14 +115,21 @@ Then("the response should contain the updated user's details", async function ()
 
 //scenario 4: Delete User
 Given('I send a DELETE request to {string}', async function (url: string) {
-  response = await axios.delete(url, {
+  try {response = await axios.delete(url, {
     headers: {
       'x-api-key':'reqres-free-v1'
-    }});
-
+    }});}
+catch(error: any){
+    console.error(`Error during DELETE request to ${url}:`, error.message);  
+    console.error('Response data:', error.response?.data);
+    throw error; // Rethrow the error to ensure the test fails
+   }
    console.log('Response Status of Delete:', response.status);
 });
-Then('the response status should be {int} for deletion', async function (statusCode: number) {
+Then('the delete response status should be {int}', async function (statusCode: number) {
+  if (!response) {
+    throw new Error('Response object is missing!');
+  }
   expect(response.status).toBe(statusCode);
 });
 
@@ -103,14 +142,17 @@ interface User {
 
 let responses: AxiosResponse[] = [];
 
-Given('I send a POST request to {string} with body from {string}', async function (url: string, fileName: string) {
+Given('I send a POST request to {string} with body from {string}', async function (url: string, fileName: string) 
+{
+  try{
   const absolutePath = path.resolve(process.cwd(), `src/test/Data/${fileName}`);
   const fileContent = fs.readFileSync(absolutePath, 'utf-8');
   const users: User[] = JSON.parse(fileContent);
 
   responses = [];
-
-  for (const user of users) {
+try{
+  for (const user of users) 
+    {
     const response = await axios.post(url, user, {
       headers: {
         'Content-Type': 'application/json',
@@ -120,9 +162,19 @@ Given('I send a POST request to {string} with body from {string}', async functio
     responses.push(response);
     console.log(`✅ Created user: ${JSON.stringify(response.data)}`);
   }
+    }
+  catch(innerError: any){
+    console.error(`Error during POST request to ${url}:`, innerError.message);  
+    console.error('Response data:', innerError.response?.data);
+    throw innerError; // Rethrow the error to ensure the test fails
+   }}
+   catch(error: any){
+    console.error('Error reading or parsing the JSON file:', error.message);
+    throw error; // Rethrow the error to ensure the test fails
+   }
 });
 
-Then('the response status should be {int}', function (statusCode: number) {
+Then('the multiple post response status should be {int}', function (statusCode: number) {
   expect(responses.length).toBeGreaterThan(0);
   for (const res of responses) {
     expect(res.status).toBe(statusCode);

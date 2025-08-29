@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 662100
+              "duration": 630500
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 329200
+              "duration": 322699
             }
           },
           {
@@ -40,17 +40,20 @@
             },
             "result": {
               "status": "passed",
-              "duration": 133300199
+              "duration": 171900500
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "the response status should be 200",
+            "name": "the Get response status should be 200",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:27"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 2072699
             }
           },
           {
@@ -58,9 +61,12 @@
             "keyword": "Then ",
             "line": 8,
             "name": "the response should contain a list of users",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:34"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 4181300
             }
           },
           {
@@ -68,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 805400
+              "duration": 758400
             }
           }
         ],
@@ -92,7 +98,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1202600
+              "duration": 546400
             }
           },
           {
@@ -105,7 +111,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 238200
+              "duration": 411100
             }
           },
           {
@@ -115,12 +121,12 @@
                   {
                     "cells": [
                       "name",
-                      "job"
+                      "John"
                     ]
                   },
                   {
                     "cells": [
-                      "John",
+                      "job",
                       "Developer"
                     ]
                   }
@@ -131,21 +137,24 @@
             "line": 13,
             "name": "I send a POST request to \"https://reqres.in/api/users\" with body:",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:47"
+              "location": "src\\test\\steps\\api.steps.ts:58"
             },
             "result": {
               "status": "passed",
-              "duration": 162677599
+              "duration": 373241300
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 16,
-            "name": "the response status should be 201",
+            "name": "the Post response status should be 201",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:73"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 427000
             }
           },
           {
@@ -153,9 +162,12 @@
             "keyword": "And ",
             "line": 17,
             "name": "the response should contain the created user's details",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:80"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 697199
             }
           },
           {
@@ -163,7 +175,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 773100
+              "duration": 484399
             }
           }
         ],
@@ -191,7 +203,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 832800
+              "duration": 273999
             }
           },
           {
@@ -204,7 +216,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 162399
+              "duration": 174899
             }
           },
           {
@@ -230,21 +242,24 @@
             "line": 21,
             "name": "I send a PUT request to \"https://reqres.in/api/users/2\" with body:",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:68"
+              "location": "src\\test\\steps\\api.steps.ts:87"
             },
             "result": {
               "status": "passed",
-              "duration": 307083999
+              "duration": 348265600
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 24,
-            "name": "the response status should be 200",
+            "name": "the Put response status should be 200",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:103"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 412299
             }
           },
           {
@@ -252,7 +267,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 508000
+              "duration": 541999
             }
           }
         ],
@@ -280,7 +295,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 464300
+              "duration": 314399
             }
           },
           {
@@ -293,7 +308,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 130299
+              "duration": 103700
             }
           },
           {
@@ -302,21 +317,24 @@
             "line": 28,
             "name": "I send a DELETE request to \"https://reqres.in/api/users/2\"",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:85"
+              "location": "src\\test\\steps\\api.steps.ts:117"
             },
             "result": {
               "status": "passed",
-              "duration": 155193300
+              "duration": 153632399
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 29,
-            "name": "the response status should be 204",
+            "name": "the delete response status should be 204",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:129"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 368800
             }
           },
           {
@@ -324,7 +342,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 833699
+              "duration": 391999
             }
           }
         ],
@@ -352,7 +370,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1445000
+              "duration": 617999
             }
           },
           {
@@ -365,7 +383,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 215900
+              "duration": 103300
             }
           },
           {
@@ -374,21 +392,24 @@
             "line": 33,
             "name": "I send a POST request to \"https://reqres.in/api/users\" with body from \"testData.json\"",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:106"
+              "location": "src\\test\\steps\\api.steps.ts:145"
             },
             "result": {
               "status": "passed",
-              "duration": 321642100
+              "duration": 353735900
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 34,
-            "name": "the response status should be 201",
+            "name": "the multiple post response status should be 201",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:177"
+            },
             "result": {
-              "status": "ambiguous",
-              "duration": 0
+              "status": "passed",
+              "duration": 1306199
             }
           },
           {
@@ -396,7 +417,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 487700
+              "duration": 465000
             }
           }
         ],
