@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","166","Update user information","","Thu Sep 04 13:26:40 IST 2025","passed","Thu Sep 04 13:26:40 IST 2025","","","",""
+"","163","Delete a user","","Thu Sep 04 13:26:40 IST 2025","passed","Thu Sep 04 13:26:40 IST 2025","","","",""
+"","156","Create a user with missing fields","","Thu Sep 04 13:26:41 IST 2025","passed","Thu Sep 04 13:26:41 IST 2025","","","",""
+"","337","Retrieve a user with invalid ID","","Thu Sep 04 13:26:41 IST 2025","passed","Thu Sep 04 13:26:41 IST 2025","","","",""
+"","151","Retrieve users from page 2","","Thu Sep 04 13:26:40 IST 2025","passed","Thu Sep 04 13:26:40 IST 2025","","","",""
+"","300","create user using below data","","Thu Sep 04 13:26:40 IST 2025","passed","Thu Sep 04 13:26:40 IST 2025","","","",""
+"","334","Create multiple users from JSON file","","Thu Sep 04 13:26:40 IST 2025","passed","Thu Sep 04 13:26:41 IST 2025","","","",""
