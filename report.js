@@ -1,14 +1,15 @@
-
-const reporter =require( 'cucumber-html-reporter');
-// report.js
-
+const reporter = require('cucumber-html-reporter');
 
 const options = {
-  theme: 'bootstrap',
+  theme: 'bootstrap', // or 'hierarchy'
   jsonFile: 'reports/cucumber_report.json',
   output: 'reports/cucumber_report.html',
   reportSuiteAsScenarios: true,
-  launchReport: true
+  launchReport: false,
+  metadata: {
+    "App Version": "1.0.0",
+    "Test Environment": "QA",
+  }
 };
 
 reporter.generate(options);

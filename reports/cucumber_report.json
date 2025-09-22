@@ -6,75 +6,59 @@
         "description": "",
         "id": "get-users-from-reqres-api;retrieve-users-from-page-2",
         "keyword": "Scenario",
-        "line": 5,
+        "line": 7,
         "name": "Retrieve users from page 2",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 630500
-            }
-          },
-          {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "I have access to the ReqRes API",
             "match": {
               "location": "src\\test\\steps\\api.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 322699
+              "duration": 1524499
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
+            "line": 8,
             "name": "I send a GET request to \"https://reqres.in/api/users?page=2\"",
             "match": {
               "location": "src\\test\\steps\\api.steps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 171900500
+              "duration": 212478499
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
+            "line": 9,
             "name": "the Get response status should be 200",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:27"
+              "location": "src\\test\\steps\\api.steps.ts:28"
             },
             "result": {
               "status": "passed",
-              "duration": 2072699
+              "duration": 1935199
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 8,
+            "line": 10,
             "name": "the response should contain a list of users",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:34"
+              "location": "src\\test\\steps\\api.steps.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 4181300
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 758400
+              "duration": 2342599
             }
           }
         ],
@@ -90,28 +74,20 @@
         "description": "",
         "id": "get-users-from-reqres-api;create-user-using-below-data",
         "keyword": "Scenario",
-        "line": 12,
+        "line": 13,
         "name": "create user using below data",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 546400
-            }
-          },
-          {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "I have access to the ReqRes API",
             "match": {
               "location": "src\\test\\steps\\api.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 411100
+              "duration": 250999
             }
           },
           {
@@ -121,7 +97,7 @@
                   {
                     "cells": [
                       "name",
-                      "John"
+                      "hgy"
                     ]
                   },
                   {
@@ -134,48 +110,40 @@
               }
             ],
             "keyword": "Given ",
-            "line": 13,
+            "line": 14,
             "name": "I send a POST request to \"https://reqres.in/api/users\" with body:",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:58"
+              "location": "src\\test\\steps\\api.steps.ts:59"
             },
             "result": {
               "status": "passed",
-              "duration": 373241300
+              "duration": 337905099
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 16,
+            "line": 17,
             "name": "the Post response status should be 201",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:73"
+              "location": "src\\test\\steps\\api.steps.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 427000
+              "duration": 517400
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 17,
+            "line": 18,
             "name": "the response should contain the created user's details",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:80"
+              "location": "src\\test\\steps\\api.steps.ts:82"
             },
             "result": {
               "status": "passed",
-              "duration": 697199
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 484399
+              "duration": 764400
             }
           }
         ],
@@ -186,7 +154,7 @@
           },
           {
             "name": "@regression",
-            "line": 11
+            "line": 12
           }
         ],
         "type": "scenario"
@@ -195,28 +163,20 @@
         "description": "",
         "id": "get-users-from-reqres-api;update-user-information",
         "keyword": "Scenario",
-        "line": 20,
+        "line": 21,
         "name": "Update user information",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 273999
-            }
-          },
-          {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "I have access to the ReqRes API",
             "match": {
               "location": "src\\test\\steps\\api.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 174899
+              "duration": 673199
             }
           },
           {
@@ -239,35 +199,27 @@
               }
             ],
             "keyword": "Given ",
-            "line": 21,
+            "line": 22,
             "name": "I send a PUT request to \"https://reqres.in/api/users/2\" with body:",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:87"
+              "location": "src\\test\\steps\\api.steps.ts:89"
             },
             "result": {
               "status": "passed",
-              "duration": 348265600
+              "duration": 329426400
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 24,
+            "line": 25,
             "name": "the Put response status should be 200",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:103"
+              "location": "src\\test\\steps\\api.steps.ts:106"
             },
             "result": {
               "status": "passed",
-              "duration": 412299
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 541999
+              "duration": 1454099
             }
           }
         ],
@@ -278,7 +230,7 @@
           },
           {
             "name": "@regression",
-            "line": 19
+            "line": 20
           }
         ],
         "type": "scenario"
@@ -287,62 +239,46 @@
         "description": "",
         "id": "get-users-from-reqres-api;delete-a-user",
         "keyword": "Scenario",
-        "line": 27,
+        "line": 28,
         "name": "Delete a user",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 314399
-            }
-          },
-          {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "I have access to the ReqRes API",
             "match": {
               "location": "src\\test\\steps\\api.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 103700
+              "duration": 120000
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 28,
+            "line": 29,
             "name": "I send a DELETE request to \"https://reqres.in/api/users/2\"",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:117"
+              "location": "src\\test\\steps\\api.steps.ts:120"
             },
             "result": {
               "status": "passed",
-              "duration": 153632399
+              "duration": 200777799
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 29,
+            "line": 30,
             "name": "the delete response status should be 204",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:129"
+              "location": "src\\test\\steps\\api.steps.ts:134"
             },
             "result": {
               "status": "passed",
-              "duration": 368800
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 391999
+              "duration": 376600
             }
           }
         ],
@@ -353,7 +289,7 @@
           },
           {
             "name": "@regression",
-            "line": 26
+            "line": 27
           }
         ],
         "type": "scenario"
@@ -362,62 +298,46 @@
         "description": "",
         "id": "get-users-from-reqres-api;create-multiple-users-from-json-file",
         "keyword": "Scenario",
-        "line": 32,
+        "line": 33,
         "name": "Create multiple users from JSON file",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 617999
-            }
-          },
-          {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
+            "line": 5,
             "name": "I have access to the ReqRes API",
             "match": {
               "location": "src\\test\\steps\\api.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 103300
+              "duration": 114399
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 33,
+            "line": 34,
             "name": "I send a POST request to \"https://reqres.in/api/users\" with body from \"testData.json\"",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:145"
+              "location": "src\\test\\steps\\api.steps.ts:149"
             },
             "result": {
               "status": "passed",
-              "duration": 353735900
+              "duration": 386123500
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 34,
+            "line": 35,
             "name": "the multiple post response status should be 201",
             "match": {
-              "location": "src\\test\\steps\\api.steps.ts:177"
+              "location": "src\\test\\steps\\api.steps.ts:181"
             },
             "result": {
               "status": "passed",
-              "duration": 1306199
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 465000
+              "duration": 1271299
             }
           }
         ],
@@ -428,7 +348,164 @@
           },
           {
             "name": "@regression",
-            "line": 31
+            "line": 32
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-users-from-reqres-api;retrieve-a-user-with-invalid-id",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Retrieve a user with invalid ID",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I have access to the ReqRes API",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 123000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 39,
+            "name": "I send a GET request to invalid id \"https://reqres.in/api/users/9999\"",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:194"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63407299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 40,
+            "name": "the get user with invalid id response status should be 404",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:203"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 889400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "the response body should not contain user details",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:212"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 179299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 37
+          },
+          {
+            "name": "@negative",
+            "line": 37
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "get-users-from-reqres-api;create-a-user-with-missing-fields",
+        "keyword": "Scenario",
+        "line": 44,
+        "name": "Create a user with missing fields",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I have access to the ReqRes API",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129100
+            }
+          },
+          {
+            "arguments": [
+              {
+                "content": "{\n  \"name\": \"\"\n}",
+                "line": 46
+              }
+            ],
+            "keyword": "When ",
+            "line": 45,
+            "name": "I send a POST request to \"https://reqres.in/api/users\" with missing API key and valid body:",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:223"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 205763899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 51,
+            "name": "the response body should contain an error message",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:243"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 260000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 52,
+            "name": "the create user error response status should be 401",
+            "match": {
+              "location": "src\\test\\steps\\api.steps.ts:251"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 239099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 1
+          },
+          {
+            "name": "@regression",
+            "line": 43
+          },
+          {
+            "name": "@negative",
+            "line": 43
           }
         ],
         "type": "scenario"
